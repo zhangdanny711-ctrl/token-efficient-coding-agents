@@ -5,7 +5,7 @@ Usage:
     python3 run_batching_ablation.py --task tasks/f1_deep_chain --arm control   --run-id b1
     python3 run_batching_ablation.py --task tasks/f1_deep_chain --arm treatment --run-id b1
 
-Design: reports/batching_ablation_design.md.
+Design: docs/STUDY_DESIGN.md.
 
 Arms:
     control    — no injection at all (identical to the OpenCode baseline arm).
@@ -20,7 +20,7 @@ the existing benchmark files stay untouched.
 Run dirs are prefixed `ba_` (batching ablation) to avoid any collision with
 `oc_` benchmark runs. Default --runs-dir is OUTSIDE the project tree —
 OpenCode auto-discovers .claude/skills/ up the directory tree, so ablation
-workspaces must never live under the project (see opencode_calibration_f1_f3.md §0.2).
+workspaces must never live under the project (see docs/STUDY_DESIGN.md).
 """
 
 import argparse

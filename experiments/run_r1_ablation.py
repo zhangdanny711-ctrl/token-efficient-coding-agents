@@ -5,7 +5,7 @@ Usage:
     python3 run_r1_ablation.py --task tasks/f1_deep_chain --arm r1only    --run-id r1
     python3 run_r1_ablation.py --task tasks/f1_deep_chain --arm r1removed --run-id r1
 
-Design: reports/opencode_study/r1_ablation_design.md.
+Design: docs/STUDY_DESIGN.md.
 
 Arms:
     r1only     — workspace AGENTS.md = SKILL.md title + intro + Rule 1, verbatim.
@@ -21,7 +21,7 @@ analyze_opencode_trajectory metrics). Sibling runner; existing files untouched.
 
 Run dirs are prefixed `r1_`. Default --runs-dir is OUTSIDE the project tree —
 OpenCode auto-discovers .claude/skills/ up the directory tree, so ablation
-workspaces must never live under the project (see opencode_calibration_f1_f3.md §0.2).
+workspaces must never live under the project (see docs/STUDY_DESIGN.md).
 """
 
 import argparse
