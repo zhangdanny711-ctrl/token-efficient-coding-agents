@@ -1,0 +1,36 @@
+{
+    "job": "orders_july",
+    "source": {"path": "orders_july.csv", "format": "csv"},
+    "schema": {
+        "order_id": "int",
+        "order_date": "date",
+        "customer_name": "str",
+        "sku": "str",
+        "quantity": "int",
+        "unit_price": "decimal",
+        "region": "str"
+    },
+    "checks": [
+        {"rule": "required", "field": "order_id"},
+        {"rule": "required", "field": "customer_name"},
+        {"rule": "type", "field": "quantity", "type": "int"},
+        {"rule": "type", "field": "unit_price", "type": "decimal"},
+        {"rule": "type", "field": "order_date", "type": "date"},
+        {"rule": "range", "field": "quantity", "min": 1, "max": 500},
+        {"rule": "range", "field": "unit_price", "min": "0.01"},
+        {"rule": "one_of", "field": "region", "values": ["north", "south", "east", "west"]},
+        {"rule": "unique", "field": "order_id"}
+    ],
+    "ops": [
+        {"op": "cast", "field": "order_id", "to": "int"},
+        {"op": "cast", "field": "quantity", "to": "int"},
+        {"op": "cast", "field": "unit_price", "to": "decimal"},
+        {"op": "cast", "field": "order_date", "to": "date"},
+        {"op": "derive", "field": "line_total", "formula": "multiply", "args": ["quantity", "unit_price"]},
+        {"op": "derive", "field": "line_total", "formula": "money", "args": ["line_total"]},
+        {"op": "rename", "field": "customer_name", "to": "customer"}
+    ],
+    "target": {"path": "out/orders_july.jsonl", "format": "jsonl"},
+    "rejects": {"path": "out/orders_july.rejects.jsonl"},
+    "options": {"verbose": true, "reject_limit_pct": 25}
+}

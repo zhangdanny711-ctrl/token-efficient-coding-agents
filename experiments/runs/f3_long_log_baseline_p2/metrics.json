@@ -1,0 +1,77 @@
+{
+  "task": "f3_long_log",
+  "condition": "baseline",
+  "run_id": "p2",
+  "model": "claude-sonnet-5",
+  "agent": {
+    "exit_code": 0,
+    "stderr_tail": ""
+  },
+  "verification": {
+    "passed": true,
+    "output_tail": "........................................................................ [ 59%]\n..................................................                       [100%]\n122 passed in 0.35s\n"
+  },
+  "metrics": {
+    "tokens": {
+      "main": {
+        "input_tokens": 16,
+        "cache_read_input_tokens": 252429,
+        "cache_creation_input_tokens": 16922,
+        "output_tokens": 60
+      },
+      "subagent": {
+        "input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 0
+      },
+      "total": {
+        "input_tokens": 16,
+        "cache_read_input_tokens": 252429,
+        "cache_creation_input_tokens": 16922,
+        "output_tokens": 1531
+      },
+      "total_source": "result_event",
+      "grand_total": 270898
+    },
+    "tool_calls": {
+      "total": 7,
+      "by_tool": {
+        "Bash": 4,
+        "Read": 2,
+        "Edit": 1
+      },
+      "Read": 2,
+      "Edit": 1,
+      "Write": 0,
+      "Bash": 4,
+      "Task": 0,
+      "subagent_total": 0,
+      "subagent_by_tool": {}
+    },
+    "behavior": {
+      "search_before_read_rate": 1.0,
+      "repeated_reads": 0,
+      "distinct_files_read": 2,
+      "reads_with_offset_or_limit": 0,
+      "long_outputs": 0,
+      "long_output_threshold_chars": 4000,
+      "repeated_identical_actions": 0,
+      "max_identical_error_repeats": 1,
+      "turns_before_first_edit": 5,
+      "test_sequence": [
+        "full",
+        "full"
+      ],
+      "narrow_test_before_full": false,
+      "assistant_text_chars": 664,
+      "main_turns": 8
+    },
+    "result": {
+      "num_turns": 8,
+      "duration_ms": 34488,
+      "total_cost_usd": 0.16504020000000003,
+      "is_error": false
+    }
+  }
+}

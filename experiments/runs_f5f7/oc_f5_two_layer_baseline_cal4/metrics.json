@@ -1,0 +1,84 @@
+{
+  "task": "f5_two_layer",
+  "condition": "baseline",
+  "run_id": "cal4",
+  "agent_cli": "opencode",
+  "model": "zai-coding-plan/glm-5.2",
+  "agent": {
+    "exit_code": 0,
+    "stderr_tail": ""
+  },
+  "verification": {
+    "passed": true,
+    "output_tail": "........................................................................ [ 59%]\n..................................................                       [100%]\n122 passed in 0.35s\n"
+  },
+  "metrics": {
+    "tokens": {
+      "main": {
+        "input_tokens": 24373,
+        "cache_read_input_tokens": 485312,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 7531
+      },
+      "subagent": {
+        "input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 0
+      },
+      "total": {
+        "input_tokens": 24373,
+        "cache_read_input_tokens": 485312,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 7531
+      },
+      "total_source": "step_finish_sum",
+      "grand_total": 517216,
+      "reasoning_raw": 5394
+    },
+    "tool_calls": {
+      "total": 27,
+      "by_tool": {
+        "Bash": 7,
+        "Read": 18,
+        "Edit": 2
+      },
+      "Read": 18,
+      "Edit": 2,
+      "Write": 0,
+      "Bash": 7,
+      "Task": 0,
+      "subagent_total": 0,
+      "subagent_by_tool": {}
+    },
+    "behavior": {
+      "search_before_read_rate": 0.0,
+      "repeated_reads": 0,
+      "distinct_files_read": 18,
+      "reads_with_offset_or_limit": 0,
+      "long_outputs": 5,
+      "long_output_threshold_chars": 4000,
+      "repeated_identical_actions": 0,
+      "max_identical_error_repeats": 1,
+      "turns_before_first_edit": 22,
+      "test_sequence": [
+        "full",
+        "narrow",
+        "narrow",
+        "full"
+      ],
+      "narrow_test_before_full": false,
+      "assistant_text_chars": 3021,
+      "main_turns": 28
+    },
+    "result": {
+      "num_turns": 28,
+      "duration_ms": 211533,
+      "total_cost_usd": 0.0,
+      "is_error": false
+    },
+    "opencode": {
+      "session_id": "ses_0252c5b6affe5g2NEQQk8SsJxp"
+    }
+  }
+}

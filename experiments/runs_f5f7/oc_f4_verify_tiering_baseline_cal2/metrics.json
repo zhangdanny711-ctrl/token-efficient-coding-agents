@@ -1,0 +1,83 @@
+{
+  "task": "f4_verify_tiering",
+  "condition": "baseline",
+  "run_id": "cal2",
+  "agent_cli": "opencode",
+  "model": "zai-coding-plan/glm-5.2",
+  "agent": {
+    "exit_code": 0,
+    "stderr_tail": ""
+  },
+  "verification": {
+    "passed": true,
+    "output_tail": "============================= test session starts ==============================\nplatform linux -- Python 3.13.13, pytest-9.1.1, pluggy-1.6.0\nrootdir: /tmp/tmp.WuUECtwQqa\nconfigfile: pytest.ini\nplugins: anyio-4.12.1\ncollected 371 items\n\ntests/test_api.py .......................................                [ 10%]\ntests/test_carts_service.py ....................                         [ 15%]\ntests/test_inventory_service.py ................                         [ 20%]\ntests/test_models.py ................................................... [ 33%]\n..............                                                           [ 37%]\ntests/test_money.py .................................................... [ 51%]\n.                                                                        [ 52%]\ntests/test_orders_service.py ...................................         [ 61%]\ntests/test_pricing.py ..............................                     [ 69%]\ntests/test_reports.py .............                                      [ 73%]\ntests/test_repositories.py .........................                     [ 79%]\ntests/test_serializers.py ................                               [ 84%]\ntests/test_store.py ...............                                      [ 88%]\ntests/test_tax_discounts.py ...................                          [ 93%]\ntests/test_utils.py .........................                            [100%]\n\n============================= 371 passed in 0.55s ==============================\n"
+  },
+  "metrics": {
+    "tokens": {
+      "main": {
+        "input_tokens": 17752,
+        "cache_read_input_tokens": 102208,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 1372
+      },
+      "subagent": {
+        "input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 0
+      },
+      "total": {
+        "input_tokens": 17752,
+        "cache_read_input_tokens": 102208,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 1372
+      },
+      "total_source": "step_finish_sum",
+      "grand_total": 121332,
+      "reasoning_raw": 535
+    },
+    "tool_calls": {
+      "total": 13,
+      "by_tool": {
+        "Bash": 5,
+        "Read": 6,
+        "Edit": 2
+      },
+      "Read": 6,
+      "Edit": 2,
+      "Write": 0,
+      "Bash": 5,
+      "Task": 0,
+      "subagent_total": 0,
+      "subagent_by_tool": {}
+    },
+    "behavior": {
+      "search_before_read_rate": 1.0,
+      "repeated_reads": 0,
+      "distinct_files_read": 6,
+      "reads_with_offset_or_limit": 0,
+      "long_outputs": 3,
+      "long_output_threshold_chars": 4000,
+      "repeated_identical_actions": 0,
+      "max_identical_error_repeats": 1,
+      "turns_before_first_edit": 4,
+      "test_sequence": [
+        "full",
+        "full",
+        "full"
+      ],
+      "narrow_test_before_full": false,
+      "assistant_text_chars": 824,
+      "main_turns": 9
+    },
+    "result": {
+      "num_turns": 9,
+      "duration_ms": 42694,
+      "total_cost_usd": 0.0,
+      "is_error": false
+    },
+    "opencode": {
+      "session_id": "ses_0250559e7ffetIhbrmB6j0cOcX"
+    }
+  }
+}

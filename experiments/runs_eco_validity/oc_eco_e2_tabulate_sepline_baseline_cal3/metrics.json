@@ -1,0 +1,84 @@
+{
+  "task": "eco_e2_tabulate_sepline",
+  "condition": "baseline",
+  "run_id": "cal3",
+  "agent_cli": "opencode",
+  "model": "zai-coding-plan/glm-5.2",
+  "agent": {
+    "exit_code": 0,
+    "stderr_tail": ""
+  },
+  "verification": {
+    "passed": true,
+    "output_tail": "........................................................s..s............ [ 25%]\n.s..................s......s......s......s......s......s......s.......s. [ 51%]\n.s..s..s..s..s..s....................................................... [ 77%]\n..........................................s..ss..............            [100%]\n=============================== warnings summary ===============================\ntest/test_input.py::test_numpy_record_array\n  /tmp/tmp.bU3KDB7RDh/test/test_input.py:172: DeprecationWarning: Data type alias 'a' was deprecated in NumPy 2.0. Use the 'S' alias instead.\n    na = numpy.asarray(\n\ntest/test_input.py::test_numpy_record_array_keys\n  /tmp/tmp.bU3KDB7RDh/test/test_input.py:198: DeprecationWarning: Data type alias 'a' was deprecated in NumPy 2.0. Use the 'S' alias instead.\n    na = numpy.asarray(\n\ntest/test_input.py::test_numpy_record_array_headers\n  /tmp/tmp.bU3KDB7RDh/test/test_input.py:224: DeprecationWarning: Data type alias 'a' was deprecated in NumPy 2.0. Use the 'S' alias instead.\n    na = numpy.asarray(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n257 passed, 20 skipped, 3 warnings in 1.15s\n"
+  },
+  "metrics": {
+    "tokens": {
+      "main": {
+        "input_tokens": 42439,
+        "cache_read_input_tokens": 1041920,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 20649
+      },
+      "subagent": {
+        "input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 0
+      },
+      "total": {
+        "input_tokens": 42439,
+        "cache_read_input_tokens": 1041920,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 20649
+      },
+      "total_source": "step_finish_sum",
+      "grand_total": 1105008,
+      "reasoning_raw": 16480
+    },
+    "tool_calls": {
+      "total": 40,
+      "by_tool": {
+        "Bash": 22,
+        "Read": 16,
+        "Edit": 2
+      },
+      "Read": 16,
+      "Edit": 2,
+      "Write": 0,
+      "Bash": 22,
+      "Task": 0,
+      "subagent_total": 0,
+      "subagent_by_tool": {}
+    },
+    "behavior": {
+      "search_before_read_rate": 1.0,
+      "repeated_reads": 12,
+      "distinct_files_read": 3,
+      "reads_with_offset_or_limit": 16,
+      "long_outputs": 4,
+      "long_output_threshold_chars": 4000,
+      "repeated_identical_actions": 1,
+      "max_identical_error_repeats": 1,
+      "turns_before_first_edit": 32,
+      "test_sequence": [
+        "full",
+        "full",
+        "narrow",
+        "narrow"
+      ],
+      "narrow_test_before_full": false,
+      "assistant_text_chars": 2769,
+      "main_turns": 40
+    },
+    "result": {
+      "num_turns": 40,
+      "duration_ms": 375156,
+      "total_cost_usd": 0.0,
+      "is_error": false
+    },
+    "opencode": {
+      "session_id": "ses_024512422ffeciL79pUYCgUN5Z"
+    }
+  }
+}

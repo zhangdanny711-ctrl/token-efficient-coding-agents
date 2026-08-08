@@ -1,0 +1,76 @@
+{
+  "task": "f1_deep_chain",
+  "condition": "baseline",
+  "run_id": "p2",
+  "model": "claude-sonnet-5",
+  "agent": {
+    "exit_code": 0,
+    "stderr_tail": ""
+  },
+  "verification": {
+    "passed": true,
+    "output_tail": "........................................................................ [ 19%]\n........................................................................ [ 38%]\n........................................................................ [ 57%]\n........................................................................ [ 77%]\n........................................................................ [ 96%]\n.............                                                            [100%]\n"
+  },
+  "metrics": {
+    "tokens": {
+      "main": {
+        "input_tokens": 14,
+        "cache_read_input_tokens": 253555,
+        "cache_creation_input_tokens": 26995,
+        "output_tokens": 19
+      },
+      "subagent": {
+        "input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 0
+      },
+      "total": {
+        "input_tokens": 14,
+        "cache_read_input_tokens": 253555,
+        "cache_creation_input_tokens": 26995,
+        "output_tokens": 1645
+      },
+      "total_source": "result_event",
+      "grand_total": 282209
+    },
+    "tool_calls": {
+      "total": 6,
+      "by_tool": {
+        "Bash": 3,
+        "Read": 2,
+        "Edit": 1
+      },
+      "Read": 2,
+      "Edit": 1,
+      "Write": 0,
+      "Bash": 3,
+      "Task": 0,
+      "subagent_total": 0,
+      "subagent_by_tool": {}
+    },
+    "behavior": {
+      "search_before_read_rate": 1.0,
+      "repeated_reads": 0,
+      "distinct_files_read": 2,
+      "reads_with_offset_or_limit": 1,
+      "long_outputs": 3,
+      "long_output_threshold_chars": 4000,
+      "repeated_identical_actions": 0,
+      "max_identical_error_repeats": 0,
+      "turns_before_first_edit": 4,
+      "test_sequence": [
+        "full"
+      ],
+      "narrow_test_before_full": false,
+      "assistant_text_chars": 1298,
+      "main_turns": 7
+    },
+    "result": {
+      "num_turns": 7,
+      "duration_ms": 29271,
+      "total_cost_usd": 0.20480175000000003,
+      "is_error": false
+    }
+  }
+}

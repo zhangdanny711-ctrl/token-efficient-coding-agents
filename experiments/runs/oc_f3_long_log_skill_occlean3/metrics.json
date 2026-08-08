@@ -1,0 +1,82 @@
+{
+  "task": "f3_long_log",
+  "condition": "skill",
+  "run_id": "occlean3",
+  "agent_cli": "opencode",
+  "model": "zai-coding-plan/glm-5.2",
+  "agent": {
+    "exit_code": 0,
+    "stderr_tail": ""
+  },
+  "verification": {
+    "passed": true,
+    "output_tail": "........................................................................ [ 59%]\n..................................................                       [100%]\n122 passed in 0.36s\n"
+  },
+  "metrics": {
+    "tokens": {
+      "main": {
+        "input_tokens": 8313,
+        "cache_read_input_tokens": 117568,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 1682
+      },
+      "subagent": {
+        "input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 0
+      },
+      "total": {
+        "input_tokens": 8313,
+        "cache_read_input_tokens": 117568,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 1682
+      },
+      "total_source": "step_finish_sum",
+      "grand_total": 127563,
+      "reasoning_raw": 727
+    },
+    "tool_calls": {
+      "total": 13,
+      "by_tool": {
+        "Bash": 10,
+        "Read": 2,
+        "Edit": 1
+      },
+      "Read": 2,
+      "Edit": 1,
+      "Write": 0,
+      "Bash": 10,
+      "Task": 0,
+      "subagent_total": 0,
+      "subagent_by_tool": {}
+    },
+    "behavior": {
+      "search_before_read_rate": 1.0,
+      "repeated_reads": 0,
+      "distinct_files_read": 2,
+      "reads_with_offset_or_limit": 1,
+      "long_outputs": 0,
+      "long_output_threshold_chars": 4000,
+      "repeated_identical_actions": 0,
+      "max_identical_error_repeats": 1,
+      "turns_before_first_edit": 6,
+      "test_sequence": [
+        "full",
+        "full"
+      ],
+      "narrow_test_before_full": false,
+      "assistant_text_chars": 1555,
+      "main_turns": 10
+    },
+    "result": {
+      "num_turns": 10,
+      "duration_ms": 39826,
+      "total_cost_usd": 0.0,
+      "is_error": false
+    },
+    "opencode": {
+      "session_id": "ses_028b3ffe8ffeOoaC7W6ZRq2FAA"
+    }
+  }
+}

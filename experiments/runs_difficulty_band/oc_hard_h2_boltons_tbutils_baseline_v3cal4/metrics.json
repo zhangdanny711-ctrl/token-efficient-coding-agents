@@ -1,0 +1,84 @@
+{
+  "task": "hard_h2_boltons_tbutils",
+  "condition": "baseline",
+  "run_id": "v3cal4",
+  "agent_cli": "opencode",
+  "model": "zai-coding-plan/glm-5.2",
+  "agent": {
+    "exit_code": 0,
+    "stderr_tail": ""
+  },
+  "verification": {
+    "passed": true,
+    "output_tail": "........................................................................ [ 16%]\n........................................................................ [ 33%]\n........................................................................ [ 50%]\n........................................................................ [ 66%]\n........................................................................ [ 83%]\n........................................................................ [100%]\n432 passed in 2.58s\n"
+  },
+  "metrics": {
+    "tokens": {
+      "main": {
+        "input_tokens": 40207,
+        "cache_read_input_tokens": 706432,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 23218
+      },
+      "subagent": {
+        "input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 0
+      },
+      "total": {
+        "input_tokens": 40207,
+        "cache_read_input_tokens": 706432,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 23218
+      },
+      "total_source": "step_finish_sum",
+      "grand_total": 769857,
+      "reasoning_raw": 18508
+    },
+    "tool_calls": {
+      "total": 22,
+      "by_tool": {
+        "Bash": 16,
+        "Read": 5,
+        "Edit": 1
+      },
+      "Read": 5,
+      "Edit": 1,
+      "Write": 0,
+      "Bash": 16,
+      "Task": 0,
+      "subagent_total": 0,
+      "subagent_by_tool": {}
+    },
+    "behavior": {
+      "search_before_read_rate": 0.0,
+      "repeated_reads": 1,
+      "distinct_files_read": 3,
+      "reads_with_offset_or_limit": 2,
+      "long_outputs": 1,
+      "long_output_threshold_chars": 4000,
+      "repeated_identical_actions": 0,
+      "max_identical_error_repeats": 1,
+      "turns_before_first_edit": 9,
+      "test_sequence": [
+        "narrow",
+        "narrow",
+        "full",
+        "full"
+      ],
+      "narrow_test_before_full": true,
+      "assistant_text_chars": 3468,
+      "main_turns": 23
+    },
+    "result": {
+      "num_turns": 23,
+      "duration_ms": 300013,
+      "total_cost_usd": 0.0,
+      "is_error": false
+    },
+    "opencode": {
+      "session_id": "ses_0237d0e62ffeUbrWsuDMcT02YD"
+    }
+  }
+}

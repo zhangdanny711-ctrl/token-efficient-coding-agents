@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Per-run agent workspaces (repo copies the agent worked in) are not tracked;
+# transcripts and metrics.json are kept as the evidence record.
+experiments/runs*/**/workspace/
